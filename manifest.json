@@ -1,0 +1,15 @@
+{
+ "manifest_version": 2,
+ "name": "Elephant - Be inspired with a new animal photo",
+ "description": "Animal extension",
+ "version": "1",
+ "author": "Steve Johnson",
+ "browser_action": {
+   "default_icon": "tab-icon.png",
+   "default_title": "Animal extension"
+ },
+ "chrome_url_overrides" : {
+  "newtab": "newtab.html"
+ },
+ "permissions": ["activeTab"]
+}
