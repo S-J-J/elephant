@@ -1,7 +1,7 @@
 {
  "manifest_version": 2,
  "name": "Elephant - Be inspired with a new animal photo",
- "description": "Animal extension",
+ "description": "Be inspired with a new animal photo when you open a new tab. Perfect for learning new animals.",
  "version": "1",
  "author": "Steve Johnson",
  "browser_action": {
