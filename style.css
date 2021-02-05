@@ -1,3 +1,45 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #f6f6f6;
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+          -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+             -moz-animation: fadein 0.5s; /* Firefox < 16 */
+              -ms-animation: fadein 0.5s; /* Internet Explorer */
+               -o-animation: fadein 0.5s; /* Opera < 12.1 */
+                  animation: fadein 0.5s;
+      }
+      
+      @keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      /* Firefox < 16 */
+      @-moz-keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      /* Safari, Chrome and Opera > 12.1 */
+      @-webkit-keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+
+.container {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.0) 0,rgba(0,0,0,0),rgba(0,0,0,.9) 90%), url(https://images.unsplash.com/photo-1561716749-2ab5a223957c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 100vh;
+    }
+
 .search {
     background: #fff;
     display: flex;
@@ -6,7 +48,10 @@
     border-radius: 24px;
     z-index: 3;
     height: 44px;
-    width: 500px;
+    width: 100%;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
     -webkit-transition: all 0.1s ease-in-out 0s;
     transition: all 0.1s ease-in-out 0s;
 }
@@ -34,41 +79,10 @@
         font-size: 16px;
     }
 
-body {
-    background-color: #f6f6f6;
-    margin: 0; 
-    padding: 0; 
-    height: 100%; 
-      
-          -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
-             -moz-animation: fadein 0.5s; /* Firefox < 16 */
-              -ms-animation: fadein 0.5s; /* Internet Explorer */
-               -o-animation: fadein 0.5s; /* Opera < 12.1 */
-                  animation: fadein 0.5s;
-      }
-      
-      @keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-      
-      /* Firefox < 16 */
-      @-moz-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-      
-      /* Safari, Chrome and Opera > 12.1 */
-      @-webkit-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-
-.container {
-background-image: url(https://images.unsplash.com/photo-1526226128118-9ef71fc2f34b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80);
-background-size: cover;
-background-position: center;
-display: grid;
-place-items: center;
-min-height: 100vh;
+.animalName {
+    position: absolute;
+    bottom: 3rem;
+    right: 5rem;
+    font-size: 2rem;
+    color: white;
 }
